@@ -109,10 +109,13 @@ public class SkipList {
         p.right.left = q;
         p.right = q;
 
+        //创建冗余数据层
         i = 0; // 当前层 level = 0
+        //随机在上方创建新层
         while (r.nextDouble() < 0.5) {
             //如果超出了高度，需要重新建一个顶层
             if (i >= h) {
+                //建立新顶层，设置队列首尾
                 SkipListEntry p1, p2;
                 h = h + 1;
                 p1 = new SkipListEntry(SkipListEntry.negInf, null);
@@ -121,16 +124,18 @@ public class SkipList {
                 p1.down = head;
                 p2.left = p1;
                 p2.down = tail;
-                head.up = p1;
+                head.up = p1;//将head和tail设置为当前层的head和tail
                 tail.up = p2;
                 head = p1;
                 tail = p2;
             }
 
+            //判断插入点是否有上层，如果没有，一直往左边找，至少从最左边的head可以上到上一层.
             while (p.up == null) {
                 p = p.left;
             }
-            p = p.up;
+            //将待插入的数据插入到冗余层，只存储key，不存储value,因为value总是在最底层找到。
+            p = p.up; //将插入点移动到上一层
             SkipListEntry e;
             e = new SkipListEntry(k, null);
             e.left = p;
