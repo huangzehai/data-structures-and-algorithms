@@ -45,7 +45,7 @@ public class SkipList {
         return (n == 0);
     }
 
-    //在最下面一层，找到要插入的位置前面的那个key
+    //在最下面一层，找到要插入的位置前面的那个节点
     public SkipListEntry findEntry(String k) {
 
         SkipListEntry p;
@@ -94,6 +94,7 @@ public class SkipList {
 
     public Integer put(String k, Integer v) {
         SkipListEntry p, q;
+        //当前层
         int i;
         p = findEntry(k);
         if (k.equals(p.getKey())) {
