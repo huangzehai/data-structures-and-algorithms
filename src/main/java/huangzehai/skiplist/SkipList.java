@@ -1,4 +1,4 @@
-package com.hzh.skiplist;
+package huangzehai.skiplist;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package com.hzh.avltree;// AvlTree class
+package huangzehai.avltree;// AvlTree class
 //
 // CONSTRUCTION: with no initializer
 //
@@ -15,7 +15,7 @@ package com.hzh.avltree;// AvlTree class
 // ******************ERRORS********************************
 // Throws UnderflowException as appropriate
 
-import com.hzh.binarysearchtree.UnderflowException;
+import huangzehai.binarysearchtree.UnderflowException;
 
 /**
  * Implements an AVL tree.

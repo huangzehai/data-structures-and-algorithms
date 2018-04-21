@@ -1,4 +1,4 @@
-package com.hzh.binarysearchtree;// BinarySearchTree class
+package huangzehai.binarysearchtree;// BinarySearchTree class
 //
 // CONSTRUCTION: with no initializer
 //

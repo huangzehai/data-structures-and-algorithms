@@ -1,4 +1,4 @@
-package com.hzh.binarysearchtree;
+package huangzehai.binarysearchtree;
 
 /**
  * Exception class for access in empty containers

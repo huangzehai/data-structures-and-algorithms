@@ -1,4 +1,4 @@
-package com.hzh.skiplist;
+package huangzehai.skiplist;
 
 /**
  * Created by huangzeahi on /5/5.
